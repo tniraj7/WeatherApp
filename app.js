@@ -1,6 +1,6 @@
 const request = require('request');
 const yargs = require('yargs');
-const cityWeather = require('./playground/weather/weather');
+const cityWeather = require('./weather/weather');
 
 const API_KEY = "1bf7b4bd00bd3c84b2ca2d73fa0ddcd3";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather?q="
