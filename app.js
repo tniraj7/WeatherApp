@@ -21,10 +21,11 @@ const argv = yargs
 const CITY = encodeURIComponent(argv.City);
 const URL = `${BASE_URL}${CITY}&appid=${API_KEY}`;
 
-cityWeather.getCityWeather(URL, (errorMessage, results) => {
-    if(errorMessage) {
-        console.log(errorMessage);
-    } else {
-        console.log(JSON.stringify(results, undefined, 2));
-    }
+cityWeather.getCityWeather(URL)
+.then( (response) => {
+    console.log(response);
+}, (errorMessage) => {
+    console.log(errorMessage);
+}).catch((e) =>{
+    console.log("Error ocurred", e);
 });
