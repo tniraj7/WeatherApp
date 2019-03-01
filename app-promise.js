@@ -22,7 +22,13 @@ const CITY = encodeURIComponent(argv.City);
 const URL = `${BASE_URL}q=${CITY}&appid=${API_KEY}`;
 
 axios.get(URL).then((response) => {
-    console.log(response.data);
+    console.log(`\n------Weather Information------\n`);
+    console.log(`City name : ${response.data.name}`);
+    console.log(`Weather : ${response.data.weather[0].description}`);
+    console.log(`Max temp : ${response.data.main.temp_max-273.15} degree celsius`);
+    console.log(`Min temp : ${response.data.main.temp_min-273.15} degree celsius`);
+    console.log(`Wind speed : ${response.data.wind.speed} m/s`);
+    console.log(`\n-------------------------------\n`);
 }).catch( (e) => {
     if (response.data.cod === 401) {
         console.log("\nUnauthorized or Bad API key");
