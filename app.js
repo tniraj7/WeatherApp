@@ -2,7 +2,7 @@ const request = require('request');
 const yargs = require('yargs');
 const cityWeather = require('./weather/weather');
 
-const API_KEY = "1bf7b4bd00bd3c84b2ca2d73fa0ddcd3";
+const API_KEY = "9b2561a0d5fac4f4b75609640cdb9cc1";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather?q="
 
 const argv = yargs
