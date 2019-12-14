@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/tniraj7/WeatherApp#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "request": "^2.88.0",
     "yargs": "^4.8.1"
   }
